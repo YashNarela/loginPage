@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+}
+.logo {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.9em;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  padding: 20px 100px;
+  background-color: rgb(159, 3, 3);
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+
+.nav a {
+  position: relative;
+  margin-left: 40px;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #fff;
+}
+.nav a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  height: 3px;
+  border-radius: 5px;
+  left: 0;
+  bottom: -8px;
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+
+.nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(/realcoffee.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 80px 100px;
+}
+
+.home .content {
+  max-width: 600px;
+  color: #fff;
+}
+.home .content h2 {
+  font-size: 3em;
+  letter-spacing: 0.03em;
+}
+.content a {
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
+  font-weight: 700;
+  padding: 10px 40px;
+  border-radius: 40px;
+  transition: 0.5s;
+}
+.content p {
+  margin: 10px 0px 40px;
+}
+
+.content a:hover {
+  background: #1e0b04;
+}
+
+.home .login {
+  position: relative;
+  width: 440px;
+}
+
+.login h2 {
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+}
+.login .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 40px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 40px;
+  color: #fff;
+  font-size: 1em;
+  padding: 0px 5px 0px 45px;
+}
+.input-box label {
+  position: absolute;
+  font-size: 1em;
+  color: #fff;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-box .icon {
+  position: absolute;
+  left: 12px;
+  color: #fff;
+  top: 15px;
+  font-size: 1.2em;
+}
+
+.login .remeber-forget {
+  font-size: 0.9em;
+  color: #fff;
+  font-weight: 500;
+  margin: -25px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remeber-forget a {
+  text-decoration: none;
+  color: #fff;
+}
+.remeber-forget a:hover {
+  text-decoration: underline;
+}
+.remeber-forget label input {
+  accent-color: #1e0b04;
+  margin-right: 3px;
+}
+
+.btn {
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #1e0b04, #71412a);
+  box-shadow: 0px 8px 10px rgb(0, 0, 0, 0.5);
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+}
+.login .register {
+  font-size: 1em;
+  color: #fff;
+  text-align: center;
+  margin: 30px 0px;
+}
+.register p a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+.register p a:hover {
+  text-decoration: underline;
+}
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  font-size: 1em;
+  top: -14px;
+  left: 17px;
+}
